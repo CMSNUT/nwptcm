@@ -1,0 +1,33 @@
+---
+title: "NWPTCM备忘录"
+output: 
+  github_document:
+    toc: TRUE
+---
+
+## 初始化
+- 打开RStudio，安装shiny、shinydashboard
+```{R, eval=FALSE}
+```
+- 打开RStudio，创建基于golem的shiny的nwptcm应用程序
+
+
+
+```{R eval=FALSE}
+golem::fill_desc(
+  pkg_name = "nwptcm", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
+  pkg_title = "NWPTCM", # What the Package Does (One Line, Title Case, No Period)
+  pkg_description = "A Web Application for Traditional Chinese Medicine Network Pharmacology.", # What the package does (one paragraph).
+  authors = person(
+    given = "Donghui", # Your First Name
+    family = "Xia", # Your Last Name
+    email = "dhxia@snut.edu.cn", # Your email
+    role = c("aut", "cre") # Your role (here author/creator)
+  ),
+  repo_url = NULL, # The URL of the GitHub repo (optional),
+  pkg_version = "1.0.0", # The version of the package containing the app
+  set_options = TRUE # Set the global golem options
+)
+```
+
+
