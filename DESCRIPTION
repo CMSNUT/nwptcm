@@ -8,7 +8,10 @@ Description: A Web Application for Traditional Chinese Medicine Network
 License: What license is it under?
 Imports: 
     config,
+    DBI,
+    DT,
     golem,
+    RSQLite,
     shiny,
     shinydashboard
 Suggests: 

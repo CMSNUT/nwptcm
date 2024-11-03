@@ -169,7 +169,20 @@ getUI <- function() {
           tabName = 'about',
           h3('NWPTCM: Traditional Chinese Medicine Network Pharmacology Platform')
             # shinydashboard::box()
+        ), # END 关于NWPTCM
+
+        tabItem(
+          tabName = 'formula_herb',
+          mod_formula_herb_ui("formula_herb")
+          # shinydashboard::box()
+        ), # END 关于NWPTCM
+
+        tabItem(
+          tabName = 'herb_ingredients',
+          h3('NWPTCM: Traditional Chinese Medicine Network Pharmacology Platform')
+          # shinydashboard::box()
         ) # END 关于NWPTCM
+
       )
     )
   )
