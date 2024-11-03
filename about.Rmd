@@ -6,14 +6,21 @@ output:
 ---
 
 ## 初始化
-- 打开RStudio，安装shiny、shinydashboard
+### 打开RStudio，安装shiny、shinydashboard、golem
 ```{R, eval=FALSE}
+# if (!require("")) install.packages("")
+
+if (!require("shiny")) install.packages("shiny")
+if (!require("shinydashboard")) install.packages("shinydashboard")
+if (!require("golem")) install.packages("golem")
 ```
-- 打开RStudio，创建基于golem的shiny的nwptcm应用程序
+### 创建基于golem的shiny的nwptcm应用程序
 
+### 完善应用包信息
 
+```{R,eval=FALSE}
+library("golem")
 
-```{R eval=FALSE}
 golem::fill_desc(
   pkg_name = "nwptcm", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
   pkg_title = "NWPTCM", # What the Package Does (One Line, Title Case, No Period)
@@ -29,5 +36,53 @@ golem::fill_desc(
   set_options = TRUE # Set the global golem options
 )
 ```
+
+### 检查并安装必备包
+
+```{R,eval=FALSE}
+golem::install_dev_deps()
+```
+
+### 创建README等文件
+
+```{R,eval=FALSE}
+#golem::use_readme_rmd(open = FALSE)
+devtools::build_readme()
+usethis::use_code_of_conduct(contact = "Golem User")
+usethis::use_lifecycle_badge("Experimental")
+usethis::use_news_md(open = FALSE)
+```
+
+### 创建测试文件
+
+```{R, eval=FALSE}
+golem::use_recommended_tests()
+```
+
+### 更改应用LOGO
+
+```{R, eval=FALSE}
+golem::use_favicon()  #path = "path/to/ico"
+```
+
+### 添加帮助文档
+
+```{R,eval=FALSE}
+golem::use_utils_ui(with_test = TRUE)
+golem::use_utils_server(with_test = TRUE)
+```
+
+### 设置git信息
+
+```{R, eval=FALSE}
+usethis::use_git()
+## Sets the remote associated with 'name' to 'url'
+usethis::use_git_remote(
+  name = "origin",
+  url = "https://github.com/<OWNER>/<REPO>.git"
+)
+```
+
+
 
 

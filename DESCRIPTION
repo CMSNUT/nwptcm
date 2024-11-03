@@ -1,12 +1,9 @@
 Package: nwptcm
-Title: An Amazing Shiny App
-Version: 0.0.0.9000
+Title: NWPTCM
+Version: 1.0.0
 Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
+    person("Donghui", "Xia", , "dhxia@snut.edu.cn", role = c("aut", "cre"))
+Description: A Web Application for Traditional Chinese Medicine Network Pharmacology.
 License: What license is it under?
 Imports: 
     config,
@@ -15,3 +12,8 @@ Imports:
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
+Suggests: 
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US
